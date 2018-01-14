@@ -1,0 +1,104 @@
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Queue;
+import javax.jms.QueueConnection;
+import javax.jms.QueueConnectionFactory;
+import javax.jms.QueueReceiver;
+import javax.jms.QueueSession;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+/*import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageConsumer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import org.apache.activemq.ActiveMQConnection;
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+public class Receiver {
+private ConnectionFactory factory = null;
+private Connection connection = null;
+private Session session = null;
+private Destination destination = null;
+private MessageConsumer consumer = null;
+
+public Receiver() {
+
+}
+
+public void receiveMessage() {
+try {
+factory = new ActiveMQConnectionFactory(
+ActiveMQConnection.DEFAULT_BROKER_URL);
+connection = factory.createConnection();
+//connection = factory.createConnection();
+connection.start();
+session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+destination = session.createQueue("Example Queue");
+consumer = session.createConsumer(destination);
+Message message = consumer.receive();
+
+if (message instanceof TextMessage) {
+TextMessage text = (TextMessage) message;
+System.out.println("Message is : " + text.getText());
+}
+} catch (JMSException e) {
+e.printStackTrace();
+}
+}
+
+public static void main(String[] args) {
+Receiver receiver = new Receiver();
+receiver.receiveMessage();
+}
+}*/
+
+public class Receiver {
+      private static final String Q_CONNECTION_FACTORY = "QueueConnectionFactory";
+      private static final String Q_NAME = "myQyeue";
+      private static Context jndiContext = null;
+      private static QueueConnectionFactory queueConnectionFactory = null;
+      public static void main(String... args) {
+            QueueConnection queueConnection = null;
+            QueueSession queueSession = null;
+            Queue queue = null;
+            QueueReceiver queueReceiver = null;
+            TextMessage message = null;
+            try {
+                  jndiContext = new InitialContext();
+                  queueConnectionFactory = (QueueConnectionFactory) jndiContext.lookup(Q_CONNECTION_FACTORY);
+                  queue = (Queue) jndiContext.lookup(Q_NAME);
+            } catch (NamingException e) {
+                  System.out.println("Not able to create JNDI context: " + e.getMessage());
+                  System.exit(1);
+            }
+            try {
+                  queueConnection = queueConnectionFactory.createQueueConnection();
+                  queueSession = queueConnection.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
+                  queueReceiver = queueSession.createReceiver(queue);
+                  queueConnection.start();
+                  while (true) {
+                        Message m = queueReceiver.receive(1);
+                        if (null != m && m instanceof TextMessage) {
+                              message = (TextMessage) m;
+                              System.out.println("Message read: " + message.getText());
+                        }
+                  }
+            } catch (JMSException jmse) {
+                  System.out.println(jmse.getMessage());
+            } finally {
+                  if (null != queueConnection) {
+                        try {
+                              queueConnection.close();
+                        } catch (JMSException jmse) {}
+                  }
+            }
+      }
+}

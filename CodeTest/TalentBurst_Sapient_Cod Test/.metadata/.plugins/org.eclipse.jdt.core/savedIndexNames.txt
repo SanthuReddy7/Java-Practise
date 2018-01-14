@@ -1,0 +1,4 @@
+INDEX VERSION 1.130+D:\Java Pracrise\TalentBurst_Sapient_Cod Test\.metadata\.plugins\org.eclipse.jdt.core
+3837413.index
+1864211750.index
+3732412935.index

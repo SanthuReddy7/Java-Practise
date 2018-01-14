@@ -1,0 +1,4 @@
+INDEX VERSION 1.130+D:\practise\Java Pracrise\.metadata\.plugins\org.eclipse.jdt.core
+1992688586.index
+1166073861.index
+230671981.index

@@ -1,0 +1,13 @@
+INDEX VERSION 1.130+D:\Java Pracrise\SOAP Example\.metadata\.plugins\org.eclipse.jdt.core
+545498018.index
+792708308.index
+1824239381.index
+3507319038.index
+3381885759.index
+3518111871.index
+4123601649.index
+3273631431.index
+3929694675.index
+2513112789.index
+374681492.index
+3501185190.index

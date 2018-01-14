@@ -1,0 +1,38 @@
+package com.carnivores;
+
+
+
+public class Carnivores {
+	
+	private String lion,tiger,cheetha;
+
+	public Carnivores() {
+		super();
+	}
+
+	public String getLion() {
+		return lion;
+	}
+
+	public void setLion(String lion) {
+		this.lion = lion;
+	}
+
+	public String getTiger() {
+		return tiger;
+	}
+
+	public void setTiger(String tiger) {
+		this.tiger = tiger;
+	}
+
+	public String getCheetha() {
+		return cheetha;
+	}
+
+	public void setCheetha(String cheetha) {
+		this.cheetha = cheetha;
+	}	
+	
+
+}

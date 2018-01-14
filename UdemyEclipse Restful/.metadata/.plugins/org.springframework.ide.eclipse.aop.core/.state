@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringMVCHibernateJavaConfig"/>
+<aop-project name="Springtest"/>
+<aop-project name="HelloSpring"/>
+<aop-project name="SpringRestfulWebServiceCurdExample"/>
+<aop-project name="HelloSpring1"/>
+</aop-reference-model>

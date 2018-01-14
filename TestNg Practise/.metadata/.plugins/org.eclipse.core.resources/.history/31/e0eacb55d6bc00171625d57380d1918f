@@ -1,0 +1,16 @@
+package testcases;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.Test;
+
+public class RegisTest {
+	
+	@Test
+	public void doRegisterTest(){
+		String expectedTitle="santhu";
+		String actualTitle="mahi";
+		assert.assertEquals(actualTitle, expectedTitle);
+	}
+
+}

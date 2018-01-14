@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+D:\Java Pracrise\AngularJS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+578986244.index
+2711550602.index
+2575237253.index
+2239365344.index
+3943654981.index
+130950672.index

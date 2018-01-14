@@ -1,0 +1,118 @@
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git add .
+warning: LF will be replaced by CRLF in eMusicStore/.idea/codeInsightSettings.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/compiler.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/dataSources.local.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/dataSources.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/dataSources/1076ee93-8961-4473-8c28-f7fe6b090549.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/misc.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/modules.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/webContexts.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/.idea/workspace.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/eMusicStore.iml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/pom.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/src/main/webapp/WEB-INF/resources/css/bootstrap-theme.min.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/src/main/webapp/WEB-INF/resources/fonts/glyphicons-halflings-regular.svg.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/src/main/webapp/WEB-INF/resources/js/jquery-3.2.1.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in eMusicStore/src/main/webapp/WEB-INF/web.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in .idea/workspace.xml.
+The file will have its original line endings in your working directory.
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git status
+On branch santhu
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .idea/workspace.xml
+        modified:   eMusicStore/.idea/workspace.xml
+        modified:   eMusicStore/src/main/java/com/emusicstore/controller/HomeController.java
+        modified:   eMusicStore/src/main/webapp/WEB-INF/classes/com/emusicstore/controller/HomeController.class
+        new file:   eMusicStore/src/main/webapp/WEB-INF/resources/images/45.png
+        modified:   eMusicStore/target/classes/com/emusicstore/controller/HomeController.class
+
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git add .
+warning: LF will be replaced by CRLF in eMusicStore/.idea/workspace.xml.
+The file will have its original line endings in your working directory.
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git status
+On branch santhu
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .idea/workspace.xml
+        modified:   eMusicStore/.idea/workspace.xml
+        modified:   eMusicStore/src/main/java/com/emusicstore/controller/HomeController.java
+        modified:   eMusicStore/src/main/webapp/WEB-INF/classes/com/emusicstore/controller/HomeController.class
+        modified:   eMusicStore/target/classes/com/emusicstore/controller/HomeController.class
+
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git add .
+warning: LF will be replaced by CRLF in eMusicStore/.idea/workspace.xml.
+The file will have its original line endings in your working directory.
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git status
+On branch santhu
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .idea/workspace.xml
+        modified:   eMusicStore/.idea/workspace.xml
+        modified:   eMusicStore/src/main/java/com/emusicstore/controller/HomeController.java
+        modified:   eMusicStore/src/main/webapp/WEB-INF/classes/com/emusicstore/controller/HomeController.class
+        modified:   eMusicStore/target/classes/com/emusicstore/controller/HomeController.class
+
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git commit -m "Indented LoginController.java"
+[santhu dce6247] Indented LoginController.java
+ 5 files changed, 620 insertions(+), 31 deletions(-)
+ create mode 100644 .idea/workspace.xml
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git push
+fatal: The current branch santhu has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin santhu
+
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$ git push -u origin santhu
+Counting objects: 22, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (22/22), 11.98 KiB | 0 bytes/s, done.
+Total 22 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 6 local objects.
+To https://github.com/SanthuReddy7/E-Commerce-Application.git
+ * [new branch]      santhu -> santhu
+Branch santhu set up to track remote branch santhu from origin.
+
+Santhu Reddy@Mahi MINGW64 /d/Java Projects (santhu)
+$

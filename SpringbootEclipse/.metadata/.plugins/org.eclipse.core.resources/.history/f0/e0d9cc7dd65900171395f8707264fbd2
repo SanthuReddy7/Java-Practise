@@ -1,0 +1,13 @@
+package com.carnivores;
+
+
+
+public class Carnivores {
+	
+	private String deer;
+	
+	
+	
+	
+
+}

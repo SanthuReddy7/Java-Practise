@@ -1,0 +1,5 @@
+package com.soap.jaxws.beans;
+
+public class Person {
+
+}

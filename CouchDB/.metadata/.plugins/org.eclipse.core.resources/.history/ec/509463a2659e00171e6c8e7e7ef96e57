@@ -1,0 +1,24 @@
+import java.util.Locale;
+
+public class Ex implements Calculate{
+	int x;
+	public void cal(int item){
+		x=item*item;
+	}
+	
+public static void main(String[] args) {
+	/*int x=20;
+	String sup = (x<15)?"small":(x<22)?"tiny":"huge";
+	System.out.println(sup);
+*/
+/*Locale obj = new Locale("ENGLISH","AMERICA");
+System.out.println(obj.getCountry());*/
+	
+	Ex e = new Ex();
+	e.x=0;
+	e.cal(2);
+	System.out.println(e.x);
+	
+
+}
+}

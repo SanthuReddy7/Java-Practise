@@ -1,0 +1,15 @@
+INDEX VERSION 1.130+D:\Java Pracrise\CouchDB\.metadata\.plugins\org.eclipse.jdt.core
+1068168265.index
+2092585110.index
+1468441693.index
+516750358.index
+63192996.index
+2414598179.index
+3996609220.index
+971072507.index
+1217838910.index
+2224892938.index
+3308226360.index
+1810906063.index
+702708595.index
+2542848975.index

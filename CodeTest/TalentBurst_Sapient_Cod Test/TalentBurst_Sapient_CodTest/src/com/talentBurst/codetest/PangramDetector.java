@@ -1,0 +1,109 @@
+package com.talentBurst.codetest;
+
+import java.util.Scanner;
+
+public class PangramDetector {
+	
+
+	public static void main(String[] args) {
+	    int count=0;//Initialize counter to zero
+	    char[] arr = new char[26];//Character array of 26 size as there are 26 alphabets
+	    Scanner sc = new Scanner(System.in);
+	    String s = sc.nextLine();
+	    int n = 26;
+        
+
+	    for(int i= 0; i<s.length();i++)
+	    {
+	        if(s.charAt(i)>=65 && s.charAt(i)<=90)//Ascii value of A to Z(caps)
+	        {
+	            if(arr[s.charAt(i)-65]==0)
+	            {
+	                count++;
+	                arr[s.charAt(i)-65]=1;
+	            }   
+	        }
+
+	        if(s.charAt(i)>=97 && s.charAt(i)<=122)
+	        {
+	            if(arr[s.charAt(i)-97]==0)
+	            {
+	                count++;
+	                arr[s.charAt(i)-97]=1;
+	            }
+	            
+	        }
+	    }
+
+	    System.out.println(count+"   "+(n-count));
+	  //  System.out.println(CharAt(i));
+
+	    if(count==26)
+	    {
+	        System.out.println("Pangram");
+	    }
+	    else
+	        System.out.println("not Pangram");
+	    }
+}
+
+	
+	 /*private static final int asciiSmallX = 97;
+	    private static final int asciiSmallZ = 122;
+	    private Set<Character> distinctCharsInInputStringSortedAlphabetically = new TreeSet<Character>();
+
+	    
+
+		public void Pangram(final String inputString) {
+	        addUniqueAlphabetsToSet(inputString);
+	    }
+
+	    public boolean isPangram() {
+	        return distinctCharsInInputStringSortedAlphabetically.size() == 26;
+	    }
+
+	    private void addUniqueAlphabetsToSet(final String inputString) {
+	        for (Character character : inputString.toLowerCase().toCharArray()) {
+	            if ((int) character >= asciiSmallX
+	                    && (int) character <= asciiSmallZ) {
+	                distinctCharsInInputStringSortedAlphabetically.add(character);
+	            }
+	        }
+	    }
+
+	    public Set<Character> getMissingAlphabets() {
+	        Set<Character> missingAlphabets = new TreeSet<Character>();
+	        if (!isPangram()) {
+	            char alphabet_a = 'a';
+	            int asciiValue = (int) alphabet_a;
+	            for (Character alphabetsInInput : distinctCharsInInputStringSortedAlphabetically) {
+	                do {
+	                    if ((int) alphabetsInInput > asciiValue) {
+	                        missingAlphabets.add((char)asciiValue);
+	                    }
+	                    asciiValue++;
+	                } while ((int) alphabetsInInput >= asciiValue);
+
+	            }
+
+	            if(asciiValue <=asciiSmallZ){
+	                do{
+	                    missingAlphabets.add((char)asciiValue);
+	                    asciiValue++;
+	                }while(asciiValue <=asciiSmallZ);
+	            }
+
+	        }
+	        System.out.println("missingAlphabets" + missingAlphabets);
+	        return missingAlphabets;
+	    }
+	    public static void main(String[] args) {
+			PangramDetector pd = new PangramDetector();
+			pd.getMissingAlphabets();
+		}
+
+	}
+	
+*/
+	
+	

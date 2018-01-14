@@ -1,0 +1,93 @@
+/*import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import org.apache.activemq.ActiveMQConnection;
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+public class Sender {
+
+private ConnectionFactory factory = null;
+private Connection connection = null;
+private Session session = null;
+private Destination destination = null;
+private MessageProducer producer = null;
+
+public Sender() {
+
+}
+
+public void sendMessage() {
+
+try {
+factory = new ActiveMQConnectionFactory(
+ActiveMQConnection.DEFAULT_BROKER_URL);
+connection = factory.createConnection();
+connection.start();
+session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+destination = session.createQueue("Example Queue");
+producer = session.createProducer(destination);
+TextMessage message = session.createTextMessage();
+message.setText("Hello ...This is a sample message..sending from FirstClient");
+producer.send(message);
+System.out.println("Sent: " + message.getText());
+
+} catch (JMSException e) {
+e.printStackTrace();
+}
+}
+
+public static void main(String[] args) {
+Sender sender = new Sender();
+sender.sendMessage();
+}
+
+}*/
+
+import javax.jms.*;
+import javax.naming.*;
+
+public class Sender {
+      private static final String Q_CONNECTION_FACTORY = "QueueConnectionFactory";
+      private static final String Q_NAME = "myQyeue";
+      private static Context jndiContext = null;
+      private static QueueConnectionFactory queueConnectionFactory = null;
+      public static void main(String... args) {
+            QueueConnection queueConnection = null;
+            QueueSession queueSession = null;
+            Queue queue = null;
+            QueueSender queueSender = null;
+            TextMessage message = null;
+            final int NUM_MSGS;
+            try {
+                  jndiContext = new InitialContext();
+                  queueConnectionFactory = (QueueConnectionFactory) jndiContext.lookup(Q_CONNECTION_FACTORY);
+                  queue = (Queue) jndiContext.lookup(Q_NAME);
+            }catch (NamingException e) {
+                  System.out.println("Could not create JNDI context: " + e.getMessage());
+                  System.exit(1);
+            }
+            try {
+                  queueConnection = queueConnectionFactory.createQueueConnection();
+                  queueSession = queueConnection.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
+                  queueSender = queueSession.createSender(queue);
+                  message = queueSession.createTextMessage();
+                  for (int i = 0; i < 10; i++) {
+                        message.setText("Test Message " + ++i);
+                        System.out.println("message to send: " + message.getText());
+                        queueSender.send(message);
+                  }    
+            } catch (JMSException e) {
+                  System.out.println(e.getMessage());
+            } finally {
+                  if (null != queueConnection) {
+                        try {
+                              queueConnection.close();
+                        } catch (JMSException e) {}
+                  }
+            }
+      }
+}

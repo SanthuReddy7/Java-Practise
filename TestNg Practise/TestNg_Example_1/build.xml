@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project[
+]>
+
+<project name="Learning TestNG default=" usage " basedir=".">
+	
+
+		<!-- ==========Initilize properties ================ -->
+		<property environment="env" />
+
+		<property name="ws.home" value="${basedir}" />
+		<property name="ws.jars" value="F:\jars\newjars" />
+		<property name="test.dest" value="${ws.home}/build" />
+		<property name="test.src" value="${ws.home}/src" />
+		<property name="ng.result" value="test-output" />
+
+		<!--target name="start-selenium-server> <java jar="${ws.home}/lib/selenium-server.jar"/> 
+			</target> -->
+			
+		<target name="setClassPath" unless="test.classpath">
+			<path id="classpath_jars">
+				<fileset dir="${ws.jars}" includes="*.jar" />
+			</path>
+			<pathconvert pathsep=":" property="test.classpath" refid="classpath_jars" />
+		</target>
+		<path id="testcase.path">
+		<pathelement location =${test.desr}"/>
+		<fileset dor="${ws.jars}">
+		<include name="*.jar"/>
+		</fileset>
+		</path>
+		
+
+	</project>
+</project>

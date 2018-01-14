@@ -1,0 +1,21 @@
+package testcases;
+
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class RegisTest {
+SoftAssert softAssert= new SoftAssert();	
+	
+	@Test
+	public void doRegisterTest(){
+		String expectedTitle="santhu";
+		String actualTitle="santhu";
+		System.out.println("A");
+		//Assert.assertEquals(actualTitle, expectedTitle);
+softAssert.assertEquals(actualTitle,expectedTitle);
+		System.out.println("B");
+	
+		softAssert.assertAll();
+	}
+
+}

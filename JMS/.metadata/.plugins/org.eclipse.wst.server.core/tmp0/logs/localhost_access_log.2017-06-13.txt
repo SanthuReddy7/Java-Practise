@@ -1,0 +1,10 @@
+127.0.0.1 - - [13/Jun/2017:12:29:33 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:12:29:35 -0400] "GET /JMS_Exmaple/WEB-INF/classes/Sender.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:12:31:18 -0400] "GET /JMS_Exmaple/WEB-INF/classes/Sender.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:12:33:11 -0400] "GET /JMS_Exmaple/WEB-INF/classes/Sender.java HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jun/2017:12:34:52 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:12:34:53 -0400] "GET /JMS_Exmaple/WEB-INF/classes/Receiver.java HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jun/2017:12:55:55 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:12:55:56 -0400] "GET /JMS_Exmaple/WEB-INF/classes/Receiver.java HTTP/1.1" 404 1047
+127.0.0.1 - - [13/Jun/2017:13:10:09 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:13:10:09 -0400] "GET /JMS_Exmaple/WEB-INF/classes/Receiver.java HTTP/1.1" 404 1047

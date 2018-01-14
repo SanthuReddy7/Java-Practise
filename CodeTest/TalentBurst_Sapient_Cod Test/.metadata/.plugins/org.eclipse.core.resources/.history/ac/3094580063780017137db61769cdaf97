@@ -1,0 +1,39 @@
+package com.talentBurst.codetest;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class PangramDetector {
+	
+
+	public static void main(String[] args) {
+		   Scanner scanner = new Scanner(System.in);
+		   String input = scanner.nextLine(); 
+		    System.out.println(isPangram(input) ? "pangram" : "not pangram"); 
+		}
+
+		static boolean isPangram(String input) {
+		    boolean isPangram = false;
+
+		    if(input == null || input.length() < 26) {
+		        return isPangram;
+		    }
+
+		    input = input.toLowerCase();
+		    char [] charArray = input.toCharArray();
+		    Set<Character> charSet = new HashSet<>();
+		    for(char c : charArray) {
+		        if(Character.isLetter(c) && (!Character.isWhitespace(c))) {
+		            charSet.add(c);
+		        }
+		    }
+		    if (charSet.size() == 26) {
+		        isPangram = true;
+		    }
+		    return isPangram;
+		}   
+		}
+	

@@ -1,0 +1,6 @@
+INDEX VERSION 1.3+D:\Java Pracrise\Udemy Project\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1910379591.index
+2232705522.index
+3045024548.index
+2391102081.index
+650624910.index

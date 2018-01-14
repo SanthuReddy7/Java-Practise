@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Learning TestNG">
+	<test name="Application test" allow-return-value="true">
+		<classes>
+			<class name="testcases.ApplicationTest">
+			</class>
+		</classes>
+	</test>
+	<test name="Login Test" allow-return-value="true">
+		<classes>
+			<class name="testcases.LoginTest"></class>
+		</classes>
+	</test>
+	<test name="Registration Test" allow-return-value="true">
+		<classes>
+			<class name="testcases.RegisTest"></class>
+		</classes>
+	</test>
+</suite>

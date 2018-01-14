@@ -1,0 +1,5 @@
+package com.ineter;
+
+public interface Animals {
+
+}

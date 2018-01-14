@@ -1,0 +1,71 @@
+package com.beingjavaguys.java;
+
+ 
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.beingjavaguys.domain.Patients;
+
+public class CsvToJavaObject {
+
+	public void convertCsvToJava() {
+		String csvFileToRead = "csvFiles/csvToRead.csv";
+		BufferedReader br = null;
+		String line = "";
+		String splitBy = ",";
+		List<Patients> patientList = new ArrayList<Patients>();
+
+		try {
+
+			br = new BufferedReader(new FileReader(csvFileToRead));
+			while ((line = br.readLine()) != null) {
+
+				// split on comma(',')
+				String[] patients = line.split(splitBy);
+
+				// create car object to store values
+				Patients carObject = new Patients();
+
+				// add values from csv to car object
+				carObject.setFirstname(patients[0]);
+				carObject.setLastName(patients[1]);
+				carObject.setDOB(patients[2]);
+
+				// adding car objects to a list
+				patientList.add(carObject);
+
+			}
+			// print values stored in carList
+			printCarList(patientList);
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public void printCarList(List<Patients> carListToPrint) {
+		for (int i = 0; i < carListToPrint.size(); i++) {
+			System.out.println("CARS [year= " + carListToPrint.get(i).getYear()
+					+ " , make=" + carListToPrint.get(i).getMake()
+					+ " , model=" + carListToPrint.get(i).getModel()
+					+ " , description="
+					+ carListToPrint.get(i).getDescription() + " , price="
+					+ carListToPrint.get(i).getPrice() + "]");
+		}
+	}
+}

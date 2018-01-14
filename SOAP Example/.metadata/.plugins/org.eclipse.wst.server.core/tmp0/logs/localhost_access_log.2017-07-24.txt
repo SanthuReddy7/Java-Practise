@@ -1,0 +1,17 @@
+127.0.0.1 - - [24/Jul/2017:14:21:42 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:14:21:44 -0400] "GET /TestMart/NewFile.jsp HTTP/1.1" 200 293
+127.0.0.1 - - [24/Jul/2017:15:08:35 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:08:36 -0400] "GET /TestMart/WEB-INF/classes/org/webservice/javabrains/ProductCatalog.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:11:09 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:11:10 -0400] "GET /favicon.ico HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:11:28 -0400] "GET /TestMart/NewFile.jsp HTTP/1.1" 200 293
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:11:40 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:13:22 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:17:41 -0400] "GET /TestMart/NewFile.jsp HTTP/1.1" 200 293
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:17:42 -0400] "GET /TestMart/NewFile.jsp HTTP/1.1" 200 293
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:17:43 -0400] "GET /TestMart/NewFile.jsp HTTP/1.1" 200 293
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:23:19 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:23:33 -0400] "GET /TestMart/NewFile.jsp HTTP/1.1" 200 293
+127.0.0.1 - - [24/Jul/2017:15:43:00 -0400] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:44:02 -0400] "GET /TestMart/ProductCatalogService?wsdl HTTP/1.1" 404 1100
+0:0:0:0:0:0:0:1 - - [24/Jul/2017:15:44:19 -0400] "GET /TestMart/ProductCatelogService?wsdl HTTP/1.1" 404 1100

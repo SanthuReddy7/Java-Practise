@@ -1,0 +1,12 @@
+package com.carnivores;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Carnivores {
+	
+	private List<> carni = new ArrayList<>();
+	
+	
+
+}

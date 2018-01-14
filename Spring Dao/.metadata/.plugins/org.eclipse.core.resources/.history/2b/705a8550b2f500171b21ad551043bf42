@@ -1,0 +1,70 @@
+package com.beingjavaguys.domain;
+
+
+public class Patients {
+	private String Firstname;
+	private String LastName;
+	private String PhoneNumber;
+	private String DOB;
+	private String PatirntGender;
+	private int InsurancePolicyId;
+	private int SSN;
+	private String Date;
+	private String AllergyInfo;
+	public String getFirstname() {
+		return Firstname;
+	}
+	public void setFirstname(String firstname) {
+		Firstname = firstname;
+	}
+	public String getLastName() {
+		return LastName;
+	}
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public String getPhoneNumber() {
+		return PhoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		PhoneNumber = phoneNumber;
+	}
+	public int getDOB() {
+		return DOB;
+	}
+	public void setDOB(String DOB) {
+		DOB = DOB;
+	}
+	public String getPatirntGender() {
+		return PatirntGender;
+	}
+	public void setPatirntGender(String patirntGender) {
+		PatirntGender = patirntGender;
+	}
+	public int getInsurancePolicyId() {
+		return InsurancePolicyId;
+	}
+	public void setInsurancePolicyId(int insurancePolicyId) {
+		InsurancePolicyId = insurancePolicyId;
+	}
+	public int getSSN() {
+		return SSN;
+	}
+	public void setSSN(int sSN) {
+		SSN = sSN;
+	}
+	public int getDate() {
+		return Date;
+	}
+	public void setDate(int date) {
+		Date = date;
+	}
+	public String getAllergyInfo() {
+		return AllergyInfo;
+	}
+	public void setAllergyInfo(String allergyInfo) {
+		AllergyInfo = allergyInfo;
+	}
+
+	
+}

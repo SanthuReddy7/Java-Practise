@@ -1,0 +1,53 @@
+package com.talentBurst.codetest;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class PangramDetector {
+	
+
+	public static void main(String[] args) {
+	    int count=0;//Initialize counter to zero
+	    char[] arr = new char[26];//Character array of 26 size as there are 26 alphabets
+	    Scanner sc = new Scanner(System.in);
+	    String s = sc.nextLine();
+	    int n = 26;
+        
+
+	    for(int i= 0; i<s.length();i++)
+	    {
+	        if(s.charAt(i)>=65 && s.charAt(i)<=90)//Ascii value of A to Z(caps)
+	        {
+	            if(arr[s.charAt(i)-65]==0)
+	            {
+	                count++;
+	                arr[s.charAt(i)-65]=1;
+	            }   
+	        }
+
+	        if(s.charAt(i)>=97 && s.charAt(i)<=122)
+	        {
+	            if(arr[s.charAt(i)-97]==0)
+	            {
+	                count++;
+	                arr[s.charAt(i)-97]=1;
+	            }
+	            
+	        }
+	    }
+
+	    System.out.println(count+""+(n-count));
+
+	    if(count==26)
+	    {
+	        System.out.println("Pangram");
+	    }
+	    else
+	        System.out.println("not Pangram");
+	    }
+
+	}
+	
